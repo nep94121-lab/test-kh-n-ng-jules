@@ -6,6 +6,7 @@
 }
 
 body {
+    font-size: 16px;
     font-family: Arial;
     /* BUG 5: font xấu, nên dùng font hiện đại */
     background-color: #0a0a0a;
@@ -30,7 +31,7 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     color: #0a0a0a;
     /* BUG 9: logo ẩn, cùng màu nền */
@@ -46,7 +47,7 @@ body {
     text-decoration: none;
     color: #222;
     /* BUG 10: link quá tối trên nền tối */
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
@@ -58,7 +59,7 @@ body {
     display: none;
     /* BUG 11: hamburger ẩn nhưng không có media query để hiện trên mobile */
     flex-direction: column;
-    gap: 5px;
+    gap: 20px;
     cursor: pointer;
 }
 
@@ -70,13 +71,13 @@ body {
 
 /* ===== SECTIONS ===== */
 .section {
-    padding: 40px 20px;
+    padding: 80px 20px;
     /* BUG 12: padding quá nhỏ cho section lớn */
 }
 
 .section-title {
     text-align: center;
-    font-size: 16px;
+    font-size: 36px;
     /* BUG 13: tiêu đề section quá nhỏ */
     margin-bottom: 5px;
     /* BUG 14: margin quá nhỏ */
@@ -86,7 +87,7 @@ body {
 
 .section-subtitle {
     text-align: center;
-    font-size: 10px;
+    font-size: 16px;
     /* BUG 16: subtitle quá nhỏ */
     color: #222;
     /* BUG 17: quá tối */
@@ -106,7 +107,7 @@ body {
 }
 
 .hero-badge {
-    font-size: 10px;
+    font-size: 16px;
     /* BUG 20: badge quá nhỏ */
     color: #333;
     /* BUG 21: không đọc được */
@@ -114,13 +115,13 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 20px;
+    font-size: 48px;
     /* BUG 22: H1 quá nhỏ, nên 48-64px */
     margin-bottom: 5px;
 }
 
 .hero-content h2 {
-    font-size: 12px;
+    font-size: 24px;
     /* BUG 23: H2 quá nhỏ */
     color: #333;
     /* BUG 24: không đọc được */
@@ -133,7 +134,7 @@ body {
 }
 
 .hero-desc {
-    font-size: 10px;
+    font-size: 16px;
     /* BUG 25: mô tả quá nhỏ */
     color: #333;
     /* BUG 26: không đọc được */
@@ -143,7 +144,7 @@ body {
 
 .hero-buttons {
     display: flex;
-    gap: 5px;
+    gap: 20px;
     /* BUG 27: gap quá nhỏ */
     justify-content: center;
     margin-bottom: 30px;
@@ -151,12 +152,12 @@ body {
 
 /* ===== BUTTONS ===== */
 .btn {
-    padding: 5px 10px;
+    padding: 12px 24px;
     /* BUG 28: padding quá nhỏ */
-    border-radius: 0px;
+    border-radius: 8px;
     /* BUG 29: không bo góc */
     text-decoration: none;
-    font-size: 10px;
+    font-size: 16px;
     /* BUG 30: text quá nhỏ */
     font-weight: 600;
     transition: all 0.3s;
@@ -194,19 +195,19 @@ body {
 /* ===== STATS ===== */
 .hero-stats {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     /* BUG 36: gap nhỏ */
     justify-content: center;
 }
 
 .stat {
     text-align: center;
-    padding: 5px;
+    padding: 20px;
     /* BUG 37: padding nhỏ */
 }
 
 .stat-number {
-    font-size: 14px;
+    font-size: 36px;
     /* BUG 38: số liệu quá nhỏ */
     font-weight: bold;
     color: #333;
@@ -215,7 +216,7 @@ body {
 }
 
 .stat-label {
-    font-size: 8px;
+    font-size: 16px;
     /* BUG 40: label cực nhỏ */
     color: #222;
     /* BUG 41: không đọc được */
@@ -224,7 +225,7 @@ body {
 /* ===== ABOUT ===== */
 .about-container {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     max-width: 900px;
     margin: 0 auto;
     align-items: center;
@@ -245,7 +246,7 @@ body {
 }
 
 .about-text h3 {
-    font-size: 13px;
+    font-size: 24px;
     /* BUG 43: quá nhỏ */
     margin-bottom: 10px;
     color: #444;
@@ -253,7 +254,7 @@ body {
 }
 
 .about-text p {
-    font-size: 10px;
+    font-size: 16px;
     /* BUG 45: quá nhỏ */
     color: #333;
     /* BUG 46: không đọc được */
@@ -262,31 +263,31 @@ body {
 
 .about-highlights {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     margin-top: 15px;
     /* BUG 47: không responsive, sẽ tràn trên mobile */
 }
 
 .highlight-item {
     display: flex;
-    gap: 8px;
+    gap: 20px;
     align-items: flex-start;
 }
 
 .highlight-icon {
-    font-size: 16px;
+    font-size: 40px;
     /* BUG 48: icon nhỏ */
 }
 
 .highlight-item strong {
-    font-size: 10px;
+    font-size: 18px;
     /* BUG 49: nhỏ */
     color: #444;
     /* BUG 50: tối */
 }
 
 .highlight-item p {
-    font-size: 8px;
+    font-size: 16px;
     /* BUG 51: cực nhỏ */
     color: #222;
     /* BUG 52: không đọc */
@@ -298,7 +299,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     /* BUG 53: 6 cột, quá nhiều */
-    gap: 5px;
+    gap: 30px;
     /* BUG 54: gap nhỏ */
     max-width: 1200px;
     margin: 0 auto;
@@ -307,9 +308,9 @@ body {
 .service-card {
     background: #111;
     /* BUG 55: thiếu border hoặc shadow, card không nổi bật */
-    padding: 10px;
+    padding: 30px;
     /* BUG 56: padding nhỏ */
-    border-radius: 0px;
+    border-radius: 12px;
     /* BUG 57: không bo góc */
     text-align: center;
     transition: transform 0.3s;
@@ -321,13 +322,13 @@ body {
 }
 
 .service-icon {
-    font-size: 18px;
+    font-size: 40px;
     margin-bottom: 5px;
     /* BUG 59: icon nhỏ */
 }
 
 .service-card h3 {
-    font-size: 11px;
+    font-size: 20px;
     /* BUG 60: nhỏ */
     margin-bottom: 5px;
     color: #444;
@@ -335,7 +336,7 @@ body {
 }
 
 .service-card p {
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 62: nhỏ */
     color: #333;
     /* BUG 63: không đọc */
@@ -343,7 +344,7 @@ body {
 }
 
 .service-link {
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 64: nhỏ */
     color: #444;
     /* BUG 65: nên là accent color */
@@ -353,7 +354,7 @@ body {
 /* ===== SKILLS ===== */
 .skills-container {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     max-width: 900px;
     margin: 0 auto;
     /* BUG 66: không responsive */
@@ -364,7 +365,7 @@ body {
 }
 
 .skills-category h3 {
-    font-size: 12px;
+    font-size: 20px;
     /* BUG 67: nhỏ */
     color: #333;
     /* BUG 68: tối */
@@ -374,10 +375,10 @@ body {
 .skill-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
     margin-bottom: 5px;
     /* BUG 69: dính nhau */
-    font-size: 10px;
+    font-size: 16px;
     /* BUG 70: nhỏ */
     color: #333;
     /* BUG 71: không đọc */
@@ -385,7 +386,7 @@ body {
 
 .skill-bar {
     flex: 1;
-    height: 3px;
+    height: 8px;
     /* BUG 72: thanh quá mỏng */
     background: #222;
     border-radius: 5px;
@@ -400,24 +401,24 @@ body {
 /* ===== PORTFOLIO ===== */
 .portfolio-filter {
     display: flex;
-    gap: 5px;
+    gap: 20px;
     /* BUG 73: gap nhỏ */
     justify-content: center;
     margin-bottom: 20px;
 }
 
 .filter-btn {
-    padding: 3px 8px;
+    padding: 8px 24px;
     /* BUG 74: padding nhỏ */
     border: 1px solid #222;
     /* BUG 75: border tối */
     background: transparent;
     color: #333;
     /* BUG 76: text tối */
-    border-radius: 0px;
+    border-radius: 20px;
     /* BUG 77: không bo */
     cursor: pointer;
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 78: nhỏ */
 }
 
@@ -432,7 +433,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     /* BUG 80: 6 cột, quá nhiều */
-    gap: 5px;
+    gap: 30px;
     /* BUG 81: gap nhỏ */
     max-width: 1200px;
     margin: 0 auto;
@@ -441,19 +442,19 @@ body {
 .portfolio-card {
     position: relative;
     overflow: hidden;
-    border-radius: 0;
+    border-radius: 12px;
     /* BUG 82: không bo */
 }
 
 .portfolio-image {
-    height: 60px;
+    height: 120px;
     /* BUG 83: ảnh quá bé */
     background: linear-gradient(135deg, #6c63ff, #00d2ff);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 84: nhỏ */
     color: #333;
     /* BUG 85: tối */
@@ -466,7 +467,7 @@ body {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.9);
-    padding: 8px;
+    padding: 20px;
     transition: bottom 0.3s;
 }
 
@@ -475,19 +476,19 @@ body {
 }
 
 .portfolio-overlay h3 {
-    font-size: 9px;
+    font-size: 20px;
     color: #444;
     /* BUG 87: nhỏ + tối */
 }
 
 .portfolio-overlay p {
-    font-size: 8px;
+    font-size: 16px;
     color: #333;
     /* BUG 88: không đọc */
 }
 
 .portfolio-links a {
-    font-size: 8px;
+    font-size: 16px;
     color: #333;
     text-decoration: none;
     margin-right: 5px;
@@ -498,7 +499,7 @@ body {
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 30px;
     /* BUG 90: gap nhỏ */
     max-width: 1000px;
     margin: 0 auto;
@@ -506,21 +507,21 @@ body {
 
 .testimonial-card {
     background: #111;
-    padding: 10px;
+    padding: 30px;
     /* BUG 91: padding nhỏ */
-    border-radius: 0;
+    border-radius: 12px;
     /* BUG 92: không bo */
 }
 
 .stars {
     color: #333;
-    font-size: 10px;
+    font-size: 16px;
     margin-bottom: 8px;
     /* BUG 93: sao tối + nhỏ */
 }
 
 .testimonial-text {
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 94: nhỏ */
     color: #333;
     /* BUG 95: không đọc */
@@ -531,7 +532,7 @@ body {
 .testimonial-author {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 20px;
 }
 
 .author-avatar {
@@ -543,18 +544,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .testimonial-author strong {
-    font-size: 10px;
+    font-size: 18px;
     color: #444;
     /* BUG 97 */
 }
 
 .testimonial-author p {
-    font-size: 8px;
+    font-size: 16px;
     color: #222;
     margin: 0;
     /* BUG 98 */
@@ -564,7 +565,7 @@ body {
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 30px;
     max-width: 900px;
     margin: 0 auto;
     align-items: start;
@@ -573,8 +574,8 @@ body {
 
 .pricing-card {
     background: #111;
-    padding: 15px;
-    border-radius: 0;
+    padding: 30px;
+    border-radius: 12px;
     /* BUG 100: không bo */
     text-align: center;
     position: relative;
@@ -594,20 +595,20 @@ body {
     background: #6c63ff;
     color: #6c63ff;
     /* BUG 103: text ẩn */
-    padding: 2px 8px;
-    border-radius: 0;
-    font-size: 9px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
 .pricing-card h3 {
-    font-size: 13px;
+    font-size: 24px;
     color: #444;
     margin-bottom: 5px;
     /* BUG 104 */
 }
 
 .price {
-    font-size: 18px;
+    font-size: 36px;
     /* BUG 105: giá nhỏ */
     font-weight: bold;
     color: #333;
@@ -615,7 +616,7 @@ body {
 }
 
 .price-period {
-    font-size: 9px;
+    font-size: 16px;
     color: #222;
     margin-bottom: 10px;
     /* BUG 107 */
@@ -628,11 +629,11 @@ body {
 }
 
 .pricing-features li {
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 108: nhỏ */
     color: #333;
     /* BUG 109: không đọc */
-    padding: 3px 0;
+    padding: 10px 0;
     /* BUG 110: dính nhau */
 }
 
@@ -640,15 +641,15 @@ body {
 .team-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 30px;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .team-card {
     background: #111;
-    padding: 10px;
-    border-radius: 0;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
 }
 
@@ -663,30 +664,30 @@ body {
     justify-content: center;
     font-weight: bold;
     margin: 0 auto 8px;
-    font-size: 14px;
+    font-size: 24px;
 }
 
 .team-card h3 {
-    font-size: 11px;
+    font-size: 20px;
     color: #444;
     /* BUG 112 */
 }
 
 .team-card p {
-    font-size: 9px;
+    font-size: 16px;
     color: #222;
     /* BUG 113 */
 }
 
 .social-links {
     display: flex;
-    gap: 5px;
+    gap: 20px;
     justify-content: center;
     margin-top: 5px;
 }
 
 .social-links a {
-    font-size: 8px;
+    font-size: 16px;
     color: #333;
     text-decoration: none;
     /* BUG 114 */
@@ -701,12 +702,12 @@ body {
 .faq-item {
     border-bottom: 1px solid #111;
     /* BUG 115: border quá tối */
-    padding: 8px 0;
+    padding: 20px 0;
     /* BUG 116: padding nhỏ */
 }
 
 .faq-question {
-    font-size: 11px;
+    font-size: 18px;
     /* BUG 117: nhỏ */
     font-weight: bold;
     color: #333;
@@ -715,7 +716,7 @@ body {
 }
 
 .faq-answer {
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 119: nhỏ */
     color: #222;
     /* BUG 120: không đọc */
@@ -727,7 +728,7 @@ body {
 /* ===== CONTACT ===== */
 .contact-container {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     max-width: 900px;
     margin: 0 auto;
     /* BUG 122: không responsive */
@@ -739,24 +740,24 @@ body {
 
 .contact-item {
     display: flex;
-    gap: 8px;
+    gap: 20px;
     align-items: center;
     margin-bottom: 10px;
 }
 
 .contact-icon {
-    font-size: 16px;
+    font-size: 40px;
     /* BUG 123: nhỏ */
 }
 
 .contact-item strong {
-    font-size: 10px;
+    font-size: 18px;
     color: #444;
     /* BUG 124 */
 }
 
 .contact-item p {
-    font-size: 9px;
+    font-size: 16px;
     color: #222;
     margin: 0;
     /* BUG 125 */
@@ -768,7 +769,7 @@ body {
 
 .form-row {
     display: flex;
-    gap: 8px;
+    gap: 20px;
     /* BUG 126: không responsive */
 }
 
@@ -779,7 +780,7 @@ body {
 
 .form-group label {
     display: block;
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 127: nhỏ */
     color: #222;
     /* BUG 128: tối */
@@ -789,16 +790,16 @@ body {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 5px;
+    padding: 16px;
     /* BUG 129: padding nhỏ */
     background: #111;
     border: 0px solid #333;
     /* BUG 130: không viền */
-    border-radius: 0;
+    border-radius: 8px;
     /* BUG 131: không bo */
     color: #222;
     /* BUG 132: text user tối */
-    font-size: 10px;
+    font-size: 16px;
 }
 
 .form-group input:focus,
@@ -827,14 +828,14 @@ body {
 }
 
 .footer-brand p {
-    font-size: 9px;
+    font-size: 16px;
     color: #111;
     /* BUG 136: text ẩn */
 }
 
 .footer-links h4,
 .footer-social h4 {
-    font-size: 11px;
+    font-size: 18px;
     color: #222;
     margin-bottom: 8px;
     /* BUG 137 */
@@ -843,7 +844,7 @@ body {
 .footer-links a,
 .footer-social a {
     display: block;
-    font-size: 9px;
+    font-size: 16px;
     /* BUG 138: nhỏ */
     color: #111;
     /* BUG 139: ẩn */
@@ -859,7 +860,7 @@ body {
 }
 
 .footer-bottom p {
-    font-size: 8px;
+    font-size: 14px;
     /* BUG 141: nhỏ */
     color: #111;
     /* BUG 142: ẩn */
