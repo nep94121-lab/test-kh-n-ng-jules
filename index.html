@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <!-- BUG 1: thiếu viewport meta tag → không responsive trên mobile -->
-    <title></title> <!-- BUG 2: title trống → SEO tệ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio - Tuan Anh</title> <!-- BUG 2: title trống → SEO tệ -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -195,14 +196,16 @@
         <h2 class="section-title">Portfolio</h2>
         <p class="section-subtitle">Một số dự án nổi bật</p>
         <div class="portfolio-filter">
-            <button class="filter-btn active">Tất cả</button>
-            <button class="filter-btn">Web App</button>
-            <button class="filter-btn">Mobile</button>
-            <button class="filter-btn">AI/ML</button>
-            <button class="filter-btn">Design</button>
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="Web App">Web App</button>
+            <button class="filter-btn" data-filter="Mobile">Mobile</button>
+            <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+            <button class="filter-btn" data-filter="Design">Design</button>
+            <button class="filter-btn" data-filter="Blockchain">Blockchain</button>
+            <button class="filter-btn" data-filter="SaaS">SaaS</button>
         </div>
         <div class="portfolio-grid">
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="Web App">
                 <div class="portfolio-image">E-Commerce</div>
                 <div class="portfolio-overlay">
                     <h3>E-Commerce Platform</h3>
@@ -213,7 +216,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="AI/ML">
                 <div class="portfolio-image">AI Chat</div>
                 <div class="portfolio-overlay">
                     <h3>AI Chatbot Pro</h3>
@@ -224,7 +227,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="Web App">
                 <div class="portfolio-image">Dashboard</div>
                 <div class="portfolio-overlay">
                     <h3>Analytics Dashboard</h3>
@@ -235,7 +238,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="Mobile">
                 <div class="portfolio-image">Mobile App</div>
                 <div class="portfolio-overlay">
                     <h3>Fitness Tracker</h3>
@@ -246,7 +249,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="SaaS">
                 <div class="portfolio-image">SaaS</div>
                 <div class="portfolio-overlay">
                     <h3>Project Manager</h3>
@@ -257,7 +260,7 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-card">
+            <div class="portfolio-card" data-category="Blockchain">
                 <div class="portfolio-image">Blockchain</div>
                 <div class="portfolio-overlay">
                     <h3>NFT Marketplace</h3>
@@ -456,7 +459,7 @@
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Nhập email">
+                        <input type="email" id="email" placeholder="Nhập email">
                         <!-- BUG 4: type="text" thay vì type="email" -->
                     </div>
                 </div>
