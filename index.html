@@ -1,151 +1,506 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Nguyen Tuan Anh</title>
+    <!-- BUG 1: thiếu viewport meta tag → không responsive trên mobile -->
+    <title></title> <!-- BUG 2: title trống → SEO tệ -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar">
-        <div class="logo">MyPortfolio</div>
+        <div class="logo">🚀 DevPortfolio</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="hamburger"> <!-- BUG 3: hamburger menu không có JS, không hoạt động trên mobile -->
+            <span></span><span></span><span></span>
+        </div>
     </nav>
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <p class="hero-badge">👋 Welcome to my world</p>
             <h1>Xin chào, tôi là <span class="highlight">Tuan Anh</span></h1>
-            <p class="subtitle">Full Stack Developer | AI Enthusiast</p>
+            <h2>Full Stack Developer & AI Engineer</h2>
+            <p class="hero-desc">Tôi xây dựng những sản phẩm digital tuyệt vời với công nghệ hiện đại. Đam mê tạo ra
+                trải nghiệm người dùng mượt mà và hiệu năng cao.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Liên hệ</a>
-                <a href="#projects" class="btn btn-secondary">Xem dự án</a>
+                <a href="#contact" class="btn btn-primary">Liên hệ ngay</a>
+                <a href="#portfolio" class="btn btn-secondary">Xem Portfolio</a>
+                <a href="#" class="btn btn-outline">Download CV</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Projects</span></div>
+                <div class="stat"><span class="stat-number">30+</span><span class="stat-label">Clients</span></div>
+                <div class="stat"><span class="stat-number">5+</span><span class="stat-label">Years Exp</span></div>
+                <div class="stat"><span class="stat-number">99%</span><span class="stat-label">Satisfaction</span></div>
             </div>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="about">
-        <h2>Về tôi</h2>
+    <section id="about" class="about section">
+        <h2 class="section-title">Về tôi</h2>
+        <p class="section-subtitle">Tìm hiểu thêm về hành trình của tôi</p>
         <div class="about-container">
             <div class="about-image">
                 <div class="avatar-placeholder">TA</div>
             </div>
             <div class="about-text">
-                <p>Tôi là một lập trình viên đam mê công nghệ với 3 năm kinh nghiệm trong lĩnh vực phát triển web và AI. Tôi luôn tìm kiếm cơ hội để học hỏi và phát triển bản thân.</p>
-                <p>Chuyên môn: Python, JavaScript, React, Node.js, Machine Learning</p>
+                <h3>Full Stack Developer với 5 năm kinh nghiệm</h3>
+                <p>Tôi bắt đầu hành trình lập trình từ năm 2021. Với đam mê công nghệ và sáng tạo, tôi đã tham gia nhiều
+                    dự án lớn nhỏ, từ startup đến enterprise.</p>
+                <p>Chuyên môn chính: React, Node.js, Python, AI/ML, Cloud Architecture</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🎯</span>
+                        <div><strong>Problem Solver</strong>
+                            <p>Giải quyết vấn đề phức tạp</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🚀</span>
+                        <div><strong>Fast Learner</strong>
+                            <p>Nhanh chóng nắm bắt công nghệ mới</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🤝</span>
+                        <div><strong>Team Player</strong>
+                            <p>Làm việc nhóm hiệu quả</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services section">
+        <h2 class="section-title">Dịch vụ</h2>
+        <p class="section-subtitle">Những gì tôi có thể giúp bạn</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Xây dựng website hiện đại, responsive với React, Next.js, Vue.js</p>
+                <a href="#" class="service-link">Tìm hiểu thêm →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Mobile App</h3>
+                <p>Phát triển app mobile cross-platform với React Native, Flutter</p>
+                <a href="#" class="service-link">Tìm hiểu thêm →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3>AI Solutions</h3>
+                <p>Tích hợp AI, chatbot, machine learning vào sản phẩm của bạn</p>
+                <a href="#" class="service-link">Tìm hiểu thêm →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud & DevOps</h3>
+                <p>Triển khai hạ tầng cloud, CI/CD, Docker, Kubernetes</p>
+                <a href="#" class="service-link">Tìm hiểu thêm →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Thiết kế giao diện đẹp, trải nghiệm người dùng tuyệt vời</p>
+                <a href="#" class="service-link">Tìm hiểu thêm →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Security</h3>
+                <p>Bảo mật ứng dụng, penetration testing, audit code</p>
+                <a href="#" class="service-link">Tìm hiểu thêm →</a>
             </div>
         </div>
     </section>
 
     <!-- SKILLS SECTION -->
-    <section id="skills" class="skills">
-        <h2>Kỹ năng</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">🐍</div>
-                <h3>Python</h3>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 90%"></div>
+    <section id="skills" class="skills section">
+        <h2 class="section-title">Kỹ năng</h2>
+        <p class="section-subtitle">Công nghệ tôi sử dụng hàng ngày</p>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Frontend</h3>
+                <div class="skills-list">
+                    <div class="skill-item"><span>React</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:95%"></div>
+                        </div><span>95%</span>
+                    </div>
+                    <div class="skill-item"><span>TypeScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:90%"></div>
+                        </div><span>90%</span>
+                    </div>
+                    <div class="skill-item"><span>Vue.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:85%"></div>
+                        </div><span>85%</span>
+                    </div>
+                    <div class="skill-item"><span>CSS/SASS</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:92%"></div>
+                        </div><span>92%</span>
+                    </div>
                 </div>
             </div>
-            <div class="skill-card">
-                <div class="skill-icon">⚛️</div>
-                <h3>React</h3>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🟢</div>
-                <h3>Node.js</h3>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 80%"></div>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🤖</div>
-                <h3>AI/ML</h3>
-                <div class="skill-bar">
-                    <div class="skill-fill" style="width: 75%"></div>
+            <div class="skills-category">
+                <h3>Backend</h3>
+                <div class="skills-list">
+                    <div class="skill-item"><span>Node.js</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:90%"></div>
+                        </div><span>90%</span>
+                    </div>
+                    <div class="skill-item"><span>Python</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:88%"></div>
+                        </div><span>88%</span>
+                    </div>
+                    <div class="skill-item"><span>PostgreSQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:85%"></div>
+                        </div><span>85%</span>
+                    </div>
+                    <div class="skill-item"><span>GraphQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width:80%"></div>
+                        </div><span>80%</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="projects">
-        <h2>Dự án</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">Project 1</div>
-                <div class="project-info">
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="portfolio section">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-subtitle">Một số dự án nổi bật</p>
+        <div class="portfolio-filter">
+            <button class="filter-btn active">Tất cả</button>
+            <button class="filter-btn">Web App</button>
+            <button class="filter-btn">Mobile</button>
+            <button class="filter-btn">AI/ML</button>
+            <button class="filter-btn">Design</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">E-Commerce</div>
+                <div class="portfolio-overlay">
                     <h3>E-Commerce Platform</h3>
-                    <p>Nền tảng thương mại điện tử xây dựng bằng React + Node.js</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
+                    <p>React + Node.js + Stripe</p>
+                    <div class="portfolio-links">
+                        <a href="#">🔗 Live</a>
+                        <a href="#">📂 Code</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">Project 2</div>
-                <div class="project-info">
-                    <h3>AI Chatbot</h3>
-                    <p>Chatbot thông minh sử dụng GPT API và Python</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">OpenAI</span>
-                        <span class="tag">Flask</span>
+            <div class="portfolio-card">
+                <div class="portfolio-image">AI Chat</div>
+                <div class="portfolio-overlay">
+                    <h3>AI Chatbot Pro</h3>
+                    <p>Python + GPT-4 + WebSocket</p>
+                    <div class="portfolio-links">
+                        <a href="#">🔗 Live</a>
+                        <a href="#">📂 Code</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">Project 3</div>
-                <div class="project-info">
-                    <h3>Task Manager</h3>
-                    <p>Ứng dụng quản lý công việc với giao diện kéo thả</p>
-                    <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Vuetify</span>
+            <div class="portfolio-card">
+                <div class="portfolio-image">Dashboard</div>
+                <div class="portfolio-overlay">
+                    <h3>Analytics Dashboard</h3>
+                    <p>React + D3.js + Firebase</p>
+                    <div class="portfolio-links">
+                        <a href="#">🔗 Live</a>
+                        <a href="#">📂 Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">Mobile App</div>
+                <div class="portfolio-overlay">
+                    <h3>Fitness Tracker</h3>
+                    <p>React Native + HealthKit</p>
+                    <div class="portfolio-links">
+                        <a href="#">🔗 Live</a>
+                        <a href="#">📂 Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">SaaS</div>
+                <div class="portfolio-overlay">
+                    <h3>Project Manager</h3>
+                    <p>Next.js + Prisma + PostgreSQL</p>
+                    <div class="portfolio-links">
+                        <a href="#">🔗 Live</a>
+                        <a href="#">📂 Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">Blockchain</div>
+                <div class="portfolio-overlay">
+                    <h3>NFT Marketplace</h3>
+                    <p>Solidity + Web3.js + IPFS</p>
+                    <div class="portfolio-links">
+                        <a href="#">🔗 Live</a>
+                        <a href="#">📂 Code</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact">
-        <h2>Liên hệ</h2>
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Họ và tên</label>
-                <input type="text" id="name" placeholder="Nhập tên của bạn">
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonials section">
+        <h2 class="section-title">Đánh giá</h2>
+        <p class="section-subtitle">Khách hàng nói gì về tôi</p>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Tuan Anh đã giúp chúng tôi xây dựng platform e-commerce hoàn hảo. Code
+                    sạch, hiệu suất cao, giao hàng đúng deadline."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">NH</div>
+                    <div><strong>Nguyễn Hùng</strong>
+                        <p>CEO, TechViet</p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Nhập email">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"AI chatbot mà Tuan Anh phát triển đã tăng hiệu quả chăm sóc khách hàng lên
+                    300%. Rất ấn tượng!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">TL</div>
+                    <div><strong>Trần Linh</strong>
+                        <p>CTO, AIStartup</p>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="message">Tin nhắn</label>
-                <textarea id="message" rows="5" placeholder="Nhập tin nhắn"></textarea>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Làm việc chuyên nghiệp, sáng tạo và luôn đưa ra giải pháp tốt nhất. Highly
+                    recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PD</div>
+                    <div><strong>Phạm Dũng</strong>
+                        <p>Founder, WebPro</p>
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
-        </form>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing section">
+        <h2 class="section-title">Bảng giá</h2>
+        <p class="section-subtitle">Gói dịch vụ phù hợp với nhu cầu</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <div class="price">$499</div>
+                <p class="price-period">/project</p>
+                <ul class="pricing-features">
+                    <li>✅ Landing page</li>
+                    <li>✅ Responsive design</li>
+                    <li>✅ 3 revisions</li>
+                    <li>❌ Backend integration</li>
+                    <li>❌ Database</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Chọn gói</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="popular-badge">🔥 Popular</div>
+                <h3>Pro</h3>
+                <div class="price">$1,499</div>
+                <p class="price-period">/project</p>
+                <ul class="pricing-features">
+                    <li>✅ Full website</li>
+                    <li>✅ Responsive design</li>
+                    <li>✅ Unlimited revisions</li>
+                    <li>✅ Backend + API</li>
+                    <li>✅ Database setup</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary">Chọn gói</a>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">$4,999</div>
+                <p class="price-period">/project</p>
+                <ul class="pricing-features">
+                    <li>✅ Custom solution</li>
+                    <li>✅ AI integration</li>
+                    <li>✅ Unlimited revisions</li>
+                    <li>✅ Full stack</li>
+                    <li>✅ 6 months support</li>
+                </ul>
+                <a href="#contact" class="btn btn-outline">Chọn gói</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="team section">
+        <h2 class="section-title">Đội ngũ</h2>
+        <p class="section-subtitle">Những người cộng sự tuyệt vời</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">TA</div>
+                <h3>Tuan Anh</h3>
+                <p>Lead Developer</p>
+                <div class="social-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">MT</div>
+                <h3>Minh Thư</h3>
+                <p>UI/UX Designer</p>
+                <div class="social-links"><a href="#">Dribbble</a><a href="#">LinkedIn</a></div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">HN</div>
+                <h3>Hoàng Nam</h3>
+                <p>Backend Engineer</p>
+                <div class="social-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">LH</div>
+                <h3>Lan Hương</h3>
+                <p>Data Scientist</p>
+                <div class="social-links"><a href="#">GitHub</a><a href="#">LinkedIn</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq section">
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-subtitle">Câu hỏi thường gặp</p>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">Thời gian hoàn thành dự án là bao lâu?</div>
+                <div class="faq-answer">Tùy thuộc vào độ phức tạp, từ 2-8 tuần cho một dự án hoàn chỉnh.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Chi phí bảo trì sau khi hoàn thành?</div>
+                <div class="faq-answer">Gói Pro và Enterprise đã bao gồm bảo trì. Gói Basic tính phí $99/tháng.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Có hỗ trợ hosting không?</div>
+                <div class="faq-answer">Có! Tôi hỗ trợ deploy lên AWS, GCP, Vercel hoặc bất kỳ platform nào bạn chọn.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Quy trình làm việc như thế nào?</div>
+                <div class="faq-answer">Trao đổi yêu cầu → Thiết kế UI → Phát triển → Testing → Deploy → Bảo trì.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section">
+        <h2 class="section-title">Liên hệ</h2>
+        <p class="section-subtitle">Hãy bắt đầu dự án cùng nhau</p>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div><strong>Email</strong>
+                        <p>tuananh@developer.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <div><strong>Phone</strong>
+                        <p>+84 123 456 789</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div><strong>Location</strong>
+                        <p>Ho Chi Minh City, Vietnam</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🕐</span>
+                    <div><strong>Giờ làm việc</strong>
+                        <p>Mon-Fri: 9AM - 6PM</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" placeholder="Nhập tên">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Nhập email">
+                        <!-- BUG 4: type="text" thay vì type="email" -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Chủ đề</label>
+                    <input type="text" id="subject" placeholder="Nhập chủ đề">
+                </div>
+                <div class="form-group">
+                    <label for="message">Tin nhắn</label>
+                    <textarea id="message" rows="5" placeholder="Nhập tin nhắn"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+            </form>
+        </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2026 Tuan Anh. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo">🚀 DevPortfolio</div>
+                <p>Building digital excellence since 2021</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Me</h4>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tuan Anh. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

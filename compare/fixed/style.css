@@ -1,0 +1,321 @@
+/* ========== RESET & BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0a0a0a; /* BUG: cùng màu với body, không thấy được navbar */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a0a0a; /* BUG: logo cùng màu nền, không nhìn thấy */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333333; /* BUG: text quá tối trên nền tối, gần như không đọc được */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6c63ff;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 18px; /* BUG: tiêu đề chính quá nhỏ, nên là 48px+ */
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #6c63ff;
+}
+
+.subtitle {
+    font-size: 8px; /* BUG: phụ đề cực nhỏ, không đọc nổi */
+    color: #888;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+    padding: 5px 8px; /* BUG: padding quá nhỏ, nút bấm bé tí */
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 10px; /* BUG: text nút quá nhỏ */
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    color: #6c63ff; /* BUG: text cùng màu nền nút, không đọc được */
+}
+
+.btn-primary:hover {
+    background-color: #5a52d5;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #6c63ff;
+    border: 2px solid #6c63ff;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about {
+    padding: 100px 50px;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 15px; /* BUG: heading section quá nhỏ */
+    margin-bottom: 50px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row; /* BUG: không responsive, sẽ bể trên mobile */
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.avatar-placeholder {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #6c63ff, #3f3d56);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #333; /* BUG: text quá tối trên nền tối */
+    font-size: 11px; /* BUG: text quá nhỏ */
+}
+
+/* ========== SKILLS SECTION ========== */
+.skills {
+    padding: 100px 50px;
+    background-color: #111;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 14px; /* BUG: heading quá nhỏ */
+    margin-bottom: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* BUG: 4 cột cứng, bể trên mobile */
+    gap: 5px; /* BUG: gap quá nhỏ, card dính nhau */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: #1a1a1a;
+    padding: 10px; /* BUG: padding quá nhỏ */
+    border-radius: 0px; /* BUG: không bo góc, nhìn thô */
+    text-align: center;
+}
+
+.skill-icon {
+    font-size: 15px; /* BUG: icon quá nhỏ */
+    margin-bottom: 5px;
+}
+
+.skill-card h3 {
+    margin-bottom: 15px;
+    font-size: 11px; /* BUG: tên kỹ năng quá nhỏ */
+    color: #444; /* BUG: text quá tối */
+}
+
+.skill-bar {
+    height: 3px; /* BUG: thanh progress quá mỏng */
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6c63ff, #00d2ff);
+    border-radius: 5px;
+}
+
+/* ========== PROJECTS SECTION ========== */
+.projects {
+    padding: 100px 50px;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 14px; /* BUG: heading quá nhỏ */
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* BUG: 3 cột cứng */
+    gap: 8px; /* BUG: gap quá nhỏ */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #1a1a1a;
+    border-radius: 0px; /* BUG: không bo góc */
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.0); /* BUG: hover không có hiệu ứng phóng to  */
+}
+
+.project-image {
+    height: 50px; /* BUG: ảnh dự án quá bé */
+    background: linear-gradient(135deg, #6c63ff, #00d2ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 10px; /* BUG: text quá nhỏ */
+}
+
+.project-info {
+    padding: 8px; /* BUG: padding quá nhỏ */
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    font-size: 11px; /* BUG: tên dự án quá nhỏ */
+    color: #444; /* BUG: quá tối */
+}
+
+.project-info p {
+    color: #333; /* BUG: mô tả không đọc được */
+    font-size: 9px; /* BUG: quá nhỏ */
+    margin-bottom: 15px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: rgba(108, 99, 255, 0.1);
+    color: #333; /* BUG: tag text không đọc được */
+    padding: 2px 5px; /* BUG: padding quá nhỏ */
+    border-radius: 0px; /* BUG: tag không bo góc */
+    font-size: 8px; /* BUG: quá nhỏ */
+}
+
+/* ========== CONTACT SECTION ========== */
+.contact {
+    padding: 100px 50px;
+    background-color: #111;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 14px; /* BUG: heading nhỏ */
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 8px; /* BUG: form fields dính nhau */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 2px;
+    color: #333; /* BUG: label không đọc được */
+    font-size: 10px; /* BUG: nhỏ */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 5px; /* BUG: input quá nhỏ */
+    background-color: #1a1a1a;
+    border: 0px solid #333; /* BUG: border = 0, không thấy viền input */
+    border-radius: 0px; /* BUG: góc vuông thô */
+    color: #333; /* BUG: text người gõ không đọc được */
+    font-size: 10px; /* BUG: nhỏ */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    text-align: center;
+    padding: 10px; /* BUG: padding nhỏ */
+    background-color: #0a0a0a;
+    color: #0a0a0a; /* BUG: footer text cùng màu nền, không đọc được */
+    font-size: 9px; /* BUG: nhỏ */
+}
