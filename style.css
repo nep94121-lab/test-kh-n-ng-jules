@@ -32,7 +32,7 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #0a0a0a;
+    color: #ffffff;
     /* BUG 9: logo ẩn, cùng màu nền */
 }
 
@@ -44,7 +44,7 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #222;
+    color: #cccccc;
     /* BUG 10: link quá tối trên nền tối */
     font-size: 14px;
     transition: color 0.3s;
@@ -80,7 +80,7 @@ body {
     /* BUG 13: tiêu đề section quá nhỏ */
     margin-bottom: 5px;
     /* BUG 14: margin quá nhỏ */
-    color: #444;
+    color: #eeeeee;
     /* BUG 15: màu quá tối */
 }
 
@@ -88,7 +88,7 @@ body {
     text-align: center;
     font-size: 10px;
     /* BUG 16: subtitle quá nhỏ */
-    color: #222;
+    color: #cccccc;
     /* BUG 17: quá tối */
     margin-bottom: 20px;
     /* BUG 18: margin nhỏ */
@@ -108,7 +108,7 @@ body {
 .hero-badge {
     font-size: 10px;
     /* BUG 20: badge quá nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 21: không đọc được */
     margin-bottom: 10px;
 }
@@ -122,7 +122,7 @@ body {
 .hero-content h2 {
     font-size: 12px;
     /* BUG 23: H2 quá nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 24: không đọc được */
     margin-bottom: 10px;
     font-weight: 300;
@@ -135,7 +135,7 @@ body {
 .hero-desc {
     font-size: 10px;
     /* BUG 25: mô tả quá nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 26: không đọc được */
     max-width: 600px;
     margin: 0 auto 20px;
@@ -167,7 +167,7 @@ body {
 
 .btn-primary {
     background-color: #6c63ff;
-    color: #6c63ff;
+    color: #ffffff;
     /* BUG 31: text ẩn, cùng màu nền */
 }
 
@@ -179,13 +179,13 @@ body {
 
 .btn-secondary {
     background-color: #1a1a2e;
-    color: #333;
+    color: #dddddd;
     /* BUG 33: text không đọc được */
 }
 
 .btn-outline {
     background-color: transparent;
-    color: #333;
+    color: #dddddd;
     /* BUG 34: text không đọc được */
     border: 1px solid #222;
     /* BUG 35: border quá tối */
@@ -209,7 +209,7 @@ body {
     font-size: 14px;
     /* BUG 38: số liệu quá nhỏ */
     font-weight: bold;
-    color: #333;
+    color: #dddddd;
     /* BUG 39: không đọc được */
     display: block;
 }
@@ -217,7 +217,7 @@ body {
 .stat-label {
     font-size: 8px;
     /* BUG 40: label cực nhỏ */
-    color: #222;
+    color: #cccccc;
     /* BUG 41: không đọc được */
 }
 
@@ -248,14 +248,14 @@ body {
     font-size: 13px;
     /* BUG 43: quá nhỏ */
     margin-bottom: 10px;
-    color: #444;
+    color: #eeeeee;
     /* BUG 44: quá tối */
 }
 
 .about-text p {
     font-size: 10px;
     /* BUG 45: quá nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 46: không đọc được */
     margin-bottom: 10px;
 }
@@ -281,14 +281,14 @@ body {
 .highlight-item strong {
     font-size: 10px;
     /* BUG 49: nhỏ */
-    color: #444;
+    color: #eeeeee;
     /* BUG 50: tối */
 }
 
 .highlight-item p {
     font-size: 8px;
     /* BUG 51: cực nhỏ */
-    color: #222;
+    color: #cccccc;
     /* BUG 52: không đọc */
     margin: 0;
 }
@@ -330,14 +330,14 @@ body {
     font-size: 11px;
     /* BUG 60: nhỏ */
     margin-bottom: 5px;
-    color: #444;
+    color: #eeeeee;
     /* BUG 61: tối */
 }
 
 .service-card p {
     font-size: 9px;
     /* BUG 62: nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 63: không đọc */
     margin-bottom: 8px;
 }
@@ -345,7 +345,7 @@ body {
 .service-link {
     font-size: 9px;
     /* BUG 64: nhỏ */
-    color: #444;
+    color: #eeeeee;
     /* BUG 65: nên là accent color */
     text-decoration: none;
 }
@@ -366,7 +366,7 @@ body {
 .skills-category h3 {
     font-size: 12px;
     /* BUG 67: nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 68: tối */
     margin-bottom: 10px;
 }
@@ -379,7 +379,7 @@ body {
     /* BUG 69: dính nhau */
     font-size: 10px;
     /* BUG 70: nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 71: không đọc */
 }
 
@@ -412,7 +412,7 @@ body {
     border: 1px solid #222;
     /* BUG 75: border tối */
     background: transparent;
-    color: #333;
+    color: #dddddd;
     /* BUG 76: text tối */
     border-radius: 0px;
     /* BUG 77: không bo */
@@ -423,7 +423,7 @@ body {
 
 .filter-btn.active {
     background: #6c63ff;
-    color: #6c63ff;
+    color: #ffffff;
     /* BUG 79: text ẩn */
     border-color: #6c63ff;
 }
@@ -455,7 +455,7 @@ body {
     font-weight: bold;
     font-size: 9px;
     /* BUG 84: nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 85: tối */
 }
 
@@ -476,19 +476,19 @@ body {
 
 .portfolio-overlay h3 {
     font-size: 9px;
-    color: #444;
+    color: #eeeeee;
     /* BUG 87: nhỏ + tối */
 }
 
 .portfolio-overlay p {
     font-size: 8px;
-    color: #333;
+    color: #dddddd;
     /* BUG 88: không đọc */
 }
 
 .portfolio-links a {
     font-size: 8px;
-    color: #333;
+    color: #dddddd;
     text-decoration: none;
     margin-right: 5px;
     /* BUG 89: không đọc */
@@ -513,7 +513,7 @@ body {
 }
 
 .stars {
-    color: #333;
+    color: #dddddd;
     font-size: 10px;
     margin-bottom: 8px;
     /* BUG 93: sao tối + nhỏ */
@@ -522,7 +522,7 @@ body {
 .testimonial-text {
     font-size: 9px;
     /* BUG 94: nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 95: không đọc */
     font-style: italic;
     margin-bottom: 10px;
@@ -549,13 +549,13 @@ body {
 
 .testimonial-author strong {
     font-size: 10px;
-    color: #444;
+    color: #eeeeee;
     /* BUG 97 */
 }
 
 .testimonial-author p {
     font-size: 8px;
-    color: #222;
+    color: #cccccc;
     margin: 0;
     /* BUG 98 */
 }
@@ -592,7 +592,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background: #6c63ff;
-    color: #6c63ff;
+    color: #ffffff;
     /* BUG 103: text ẩn */
     padding: 2px 8px;
     border-radius: 0;
@@ -601,7 +601,7 @@ body {
 
 .pricing-card h3 {
     font-size: 13px;
-    color: #444;
+    color: #eeeeee;
     margin-bottom: 5px;
     /* BUG 104 */
 }
@@ -610,13 +610,13 @@ body {
     font-size: 18px;
     /* BUG 105: giá nhỏ */
     font-weight: bold;
-    color: #333;
+    color: #dddddd;
     /* BUG 106: không đọc */
 }
 
 .price-period {
     font-size: 9px;
-    color: #222;
+    color: #cccccc;
     margin-bottom: 10px;
     /* BUG 107 */
 }
@@ -630,7 +630,7 @@ body {
 .pricing-features li {
     font-size: 9px;
     /* BUG 108: nhỏ */
-    color: #333;
+    color: #dddddd;
     /* BUG 109: không đọc */
     padding: 3px 0;
     /* BUG 110: dính nhau */
@@ -668,13 +668,13 @@ body {
 
 .team-card h3 {
     font-size: 11px;
-    color: #444;
+    color: #eeeeee;
     /* BUG 112 */
 }
 
 .team-card p {
     font-size: 9px;
-    color: #222;
+    color: #cccccc;
     /* BUG 113 */
 }
 
@@ -687,7 +687,7 @@ body {
 
 .social-links a {
     font-size: 8px;
-    color: #333;
+    color: #dddddd;
     text-decoration: none;
     /* BUG 114 */
 }
@@ -709,7 +709,7 @@ body {
     font-size: 11px;
     /* BUG 117: nhỏ */
     font-weight: bold;
-    color: #333;
+    color: #dddddd;
     /* BUG 118: tối */
     cursor: pointer;
 }
@@ -717,7 +717,7 @@ body {
 .faq-answer {
     font-size: 9px;
     /* BUG 119: nhỏ */
-    color: #222;
+    color: #cccccc;
     /* BUG 120: không đọc */
     padding-top: 5px;
     display: block;
@@ -751,13 +751,13 @@ body {
 
 .contact-item strong {
     font-size: 10px;
-    color: #444;
+    color: #eeeeee;
     /* BUG 124 */
 }
 
 .contact-item p {
     font-size: 9px;
-    color: #222;
+    color: #cccccc;
     margin: 0;
     /* BUG 125 */
 }
@@ -781,7 +781,7 @@ body {
     display: block;
     font-size: 9px;
     /* BUG 127: nhỏ */
-    color: #222;
+    color: #cccccc;
     /* BUG 128: tối */
     margin-bottom: 3px;
 }
@@ -796,7 +796,7 @@ body {
     /* BUG 130: không viền */
     border-radius: 0;
     /* BUG 131: không bo */
-    color: #222;
+    color: #cccccc;
     /* BUG 132: text user tối */
     font-size: 10px;
 }
@@ -822,20 +822,20 @@ body {
 }
 
 .footer-brand .logo {
-    color: #111;
+    color: #ffffff;
     /* BUG 135: logo ẩn */
 }
 
 .footer-brand p {
     font-size: 9px;
-    color: #111;
+    color: #ffffff;
     /* BUG 136: text ẩn */
 }
 
 .footer-links h4,
 .footer-social h4 {
     font-size: 11px;
-    color: #222;
+    color: #cccccc;
     margin-bottom: 8px;
     /* BUG 137 */
 }
@@ -845,7 +845,7 @@ body {
     display: block;
     font-size: 9px;
     /* BUG 138: nhỏ */
-    color: #111;
+    color: #ffffff;
     /* BUG 139: ẩn */
     text-decoration: none;
     margin-bottom: 3px;
@@ -861,7 +861,7 @@ body {
 .footer-bottom p {
     font-size: 8px;
     /* BUG 141: nhỏ */
-    color: #111;
+    color: #ffffff;
     /* BUG 142: ẩn */
 }
 
