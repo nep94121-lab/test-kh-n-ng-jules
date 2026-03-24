@@ -16,11 +16,13 @@ def subtract(a, b):
 
 def multiply(a, b):
     """Nhân hai số - BUG: sai công thức!"""
-    return a + b  # 🐛 BUG #1: Đáng lẽ phải là a * b
+    return a * b  # 🐛 BUG #1: Đáng lẽ phải là a * b
 
 
 def divide(a, b):
     """Chia hai số - BUG: không xử lý chia cho 0!"""
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
     return a / b  # 🐛 BUG #2: Thiếu kiểm tra b == 0
 
 
@@ -31,6 +33,8 @@ def power(a, b):
 
 def average(numbers):
     """Tính trung bình cộng - BUG: sai logic khi list rỗng!"""
+    if not numbers:
+        raise ValueError("Cannot compute average of empty list")
     total = 0
     for num in numbers:
         total += num
@@ -39,7 +43,9 @@ def average(numbers):
 
 def find_max(numbers):
     """Tìm số lớn nhất - BUG: trả về sai khi có số âm!"""
-    max_val = 0  # 🐛 BUG #4: Nên dùng numbers[0] hoặc float('-inf')
+    if not numbers:
+        raise ValueError("Cannot find maximum of empty list")
+    max_val = float('-inf')  # 🐛 BUG #4: Nên dùng numbers[0] hoặc float('-inf')
     for num in numbers:
         if num > max_val:
             max_val = num
@@ -53,6 +59,8 @@ def is_even(n):
 
 def factorial(n):
     """Tính giai thừa - BUG: không xử lý số âm!"""
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
     if n == 0:
         return 1
     result = 1
@@ -63,7 +71,7 @@ def factorial(n):
 
 def celsius_to_fahrenheit(celsius):
     """Chuyển độ C sang độ F - BUG: sai công thức!"""
-    return celsius * 9 / 5 + 30  # 🐛 BUG #6: Phải là + 32, không phải + 30
+    return celsius * 9 / 5 + 32  # 🐛 BUG #6: Phải là + 32, không phải + 30
 
 
 def fibonacci(n):
@@ -81,7 +89,7 @@ def fibonacci(n):
 
 def is_palindrome(text):
     """Kiểm tra chuỗi đối xứng - BUG: phân biệt hoa/thường!"""
-    return text == text[::-1]  # 🐛 BUG #7: "Racecar" sẽ trả False (nên lower() trước)
+    return text.lower() == text[::-1].lower()  # 🐛 BUG #7: "Racecar" sẽ trả False (nên lower() trước)
 
 
 def count_vowels(text):
